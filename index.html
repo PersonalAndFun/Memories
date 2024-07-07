@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memories</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Archivo de estilos CSS personalizados -->
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="background-decor">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+        <div class="circle circle4"></div>
+        <div class="circle circle5"></div>
+        <div class="circle circle6"></div>
+    </div>
+      
+
+    <div class="container-fluid d-flex flex-column justify-content-center align-items-center min-vh-100 text-center">
+        <div>
+            <h1 class="display-4 title-animation">Our Memories</h1>
+            <p class="lead description-animation">A place to appreciate and revisit some of our memories.</p>
+        </div>
+        <div class="page mt-1">
+            <div class="margin"></div>
+            <p>Hello my baby I wanted to make something special for you, but I don't know how to make pretty crafts like you, so I made this, although it's not the best thing in the world, I hope you like it and it can make you happy</p>
+        </div>
+        <div class="wrapper mt-4">
+            <div class="circle-1"></div>
+            <div class="circle-2"></div>
+            <div class="card">
+                <section class="top">
+                    <span class="u-l">Reasons why I love you:</span>
+                </section>
+                <section class="bottom">
+                    <ul class="users">
+                        <li class="user">
+                            <span class="user-name">Reason 1</span>
+                            <span class="user-occupation">You are the prettiest girl in the world!</span>
+                        </li>
+                        <li class="user">
+                            <span class="user-name">Reason 2</span>
+                            <span class="user-occupation">I am always happy by your side!</span>
+                        </li>
+                        <li class="user">
+                            <span class="user-name">Reason 3</span>
+                            <span class="user-occupation">I love spending time with you!</span>
+                        </li>
+                        <li class="user">
+                            <span class="user-name">Those are just a few but there are many more!</span>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+        <div class="page mt-1">
+            <div class="margin"></div>
+            <p>My favorite songs that I have dedicated to you:</p>
+        </div>
+
+        <div class="music-player mt-4">
+            <h2>Our Music Playlist</h2>
+            <div class="playlist">
+                <div class="song" data-src="music/song1.mp3">
+                    <img src="images/song1.jpg" class="song-image" alt="Song 1">
+                    <span class="song-title">Mac DeMarco - My Kind Of Woman</span>
+                    <button class="play-btn">
+                        <img src="images/play-icon.webp" alt="Play">
+                    </button>
+                </div>
+                <div class="song" data-src="music/song2.mp3">
+                    <img src="images/song2.jpg" class="song-image" alt="Song 2">
+                    <span class="song-title">Los Retros - Amtrak</span>
+                    <button class="play-btn">
+                        <img src="images/play-icon.webp" alt="Play">
+                    </button>
+                </div>
+                <div class="song" data-src="music/song3.mp3">
+                    <img src="images/song3.jpg" class="song-image" alt="Song 3">
+                    <span class="song-title">Stephen Sanchez - Until I Found You</span>
+                    <button class="play-btn">
+                        <img src="images/play-icon.webp" alt="Play">
+                    </button>
+                </div>
+            </div>
+            <audio id="audio-player" controls></audio>
+        </div>
+
+        <div class="page mt-1">
+            <div class="margin"></div>
+            <p>Now let's see at some memories :D</p>
+        </div>
+
+        <div class="gallery">
+            <div class="photo-card">
+              <img src="images/photo1.jpg" alt="Photo 1">
+              <div class="info">
+                <h3>Love!</h3>
+                <p>I love when you make a drawing for me</p>
+              </div>
+              <div class="overlay">
+                <span>I Love You!</span>
+              </div>
+            </div>
+            <div class="photo-card">
+              <img src="images/photo2.jpg" alt="Photo 2">
+              <div class="info">
+                <h3>Us</h3>
+                <p>Us for real</p>
+              </div>
+              <div class="overlay">
+                <span>I Love You!</span>
+              </div>
+            </div>
+            <div class="photo-card">
+              <img src="images/photo3.jpg" alt="Photo 3">
+              <div class="info">
+                <h3>Seventh anniversary</h3>
+                <p>We are so close to our first year together</p>
+              </div>
+              <div class="overlay">
+                <span>I Love You!</span>
+              </div>
+            </div>
+            <div class="photo-card">
+                <img src="images/photo4.png" alt="Photo 3">
+                <div class="info">
+                  <h3>When we just met</h3>
+                  <p>I love playing with you</p>
+                </div>
+                <div class="overlay">
+                  <span>I Love You!</span>
+                </div>
+            </div>
+            <div class="photo-card">
+                <img src="images/photo5.png" alt="Photo 3">
+                <div class="info">
+                  <h3>Our first draw</h3>
+                  <p>You are very talented baby</p>
+                </div>
+                <div class="overlay">
+                  <span>I Love You!</span>
+                </div>
+            </div>
+            <!-- Agrega más tarjetas de fotos según sea necesario -->
+        </div>
+          
+        <div class="page mt-1">
+            <div class="margin"></div>
+            <p>This is all for now baby, I hope you liked it.
+                I love you so much and I hope we can be together forever.
+                I love you!
+            </p>
+        </div>
+
+    </div>
+    
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Archivo de scripts JS personalizados -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>
