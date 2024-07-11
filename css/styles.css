@@ -12,7 +12,7 @@ body {
     background-attachment: fixed;
     color: #333;
   }
-  
+
   .background-decor {
     position: fixed;
     top: 0;
@@ -22,56 +22,56 @@ body {
     z-index: -1;
     overflow: hidden;
   }
-  
+
   .circle {
     position: absolute;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   }
-  
+
   .circle1 {
     width: 200px;
     height: 200px;
     top: 10%;
     left: 15%;
   }
-  
+
   .circle2 {
     width: 300px;
     height: 300px;
     top: 50%;
     right: 20%;
   }
-  
+
   .circle3 {
     width: 150px;
     height: 150px;
     bottom: 20%;
     left: 10%;
   }
-  
+
   .circle4 {
     width: 250px;
     height: 250px;
     bottom: 30%;
     right: 35%;
   }
-  
+
   .circle5 {
     width: 100px;
     height: 100px;
     top: 30%;
     left: 70%;
   }
-  
+
   .circle6 {
     width: 120px;
     height: 120px;
     top: 90%;
     left: 50%;
   }
-  
+
 
 h1 {
     margin-top: 100px;
@@ -170,7 +170,7 @@ p {
     line-height: 20px;
 }
 
-.hola {
+.wrapper {
     position: relative;
     --white: #e3e3e3;
     --bc: rgb(203,46,79);
@@ -180,7 +180,7 @@ p {
     margin: 0 auto; /* Centra horizontalmente */
 }
 
-.tarjeta {
+.card {
     max-width: 100%; /* Usa todo el ancho del wrapper */
     padding: 1rem 0;
     display: grid;
@@ -361,7 +361,7 @@ p {
     justify-content: center;
     margin-bottom: 100px;
   }
-  
+
   .photo-card {
     position: relative;
     background: #fff;
@@ -373,35 +373,35 @@ p {
     cursor: pointer;
     transition: transform 0.3s ease;
   }
-  
+
   .photo-card:hover {
     transform: scale(1.05);
   }
-  
+
   .photo-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
   }
-  
+
   .photo-card .info {
     padding: 10px;
     text-align: center;
     background: linear-gradient(to bottom, #f8f8f8, #e8e8e8);
   }
-  
+
   .photo-card .info h3 {
     margin: 10px 0 5px;
     font-size: 1.2rem;
     color: #333;
   }
-  
+
   .photo-card .info p {
     margin: 0;
     font-size: 0.9rem;
     color: #777;
   }
-  
+
   .photo-card .overlay {
     position: absolute;
     top: 0;
@@ -416,135 +416,11 @@ p {
     opacity: 0;
     transition: opacity 0.3s ease;
   }
-  
+
   .photo-card:hover .overlay {
     opacity: 1;
   }
-  
+
   .photo-card .overlay span {
     font-size: 1.5rem;
   }
-  
-  * {
-    padding: 0;
-    margin: 0;
-}
-
-.oswald {
-    font-family: 'Oswald', sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
-
-body {
-    background-color: #23253a;
-}
-
-.wrapper {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; /* Ajuste para que los elementos se apilen verticalmente */
-}
-
-.container {
-    height: 200px;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: start;
-}
-
-.card {
-    width: 40px;
-    border-radius: 20px;
-    background-size: cover;
-    cursor: pointer;
-    overflow: hidden;
-    margin: flex;
-    display: flex;
-    align-items: flex-end;
-    transition: .6s cubic-bezier(0.20, -0.20, 0, 0.88);
-    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.7);
-    filter: grayscale(1);
-}
-
-.card > .content-card {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    overflow: hidden;
-    width: 500px;
-    height: 100px;
-    transform: translateY(30px);
-    opacity: 0;
-    transition: all .3s ease-in-out;
-    transition-delay: .2s;
-}
-
-.content-card h4, h3 {
-    color: #fff;
-    padding: 0px 15px;
-}
-
-.content-card > .name {
-    font-size: 45px;
-    font-family: "Oswald", sans-serif;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
-}
-
-.content-card > .song {
-    font-size: 20px;
-    font-family: "Oswald", sans-serif;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
-}
-
-.content-card > .portada {
-   position: absolute;
-   width: 50px;
-   height: 50px;
-   border-radius: 50%;
-   right: 15px;
-   bottom: 5px;
-   box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.7);
-   animation: girar 2.5s linear infinite;
-}
-
-input {
-    display: none;
-}
-
-input:checked + label {
-    width: 400px;
-    height: 220px;
-    transform: translateY(-40px);
-    filter: grayscale(0);
-}
-
-input:checked + label .content-card {
-    opacity: 1;
-    transform: translateY(-10px);
-}
-
-.card[for="s1"] {
-    background: url('../assets/img/jisoo.jpg') center center no-repeat;
-    background-size: cover;
-}
-
-.card[for="s2"] {
-    background: url('../assets/img/jisoo.jpg') center center no-repeat;
-    background-size: cover;
-}
-
-.card[for="s3"] {
-    background: url('../assets/img/jisoo.jpg') center center no-repeat;
-    background-size: cover;
-}
-
-@keyframes girar {
-    from {
-        /* Estilo de animación */
-    }
-}

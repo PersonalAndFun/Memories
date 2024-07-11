@@ -3,9 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <title>Memories</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -22,7 +19,7 @@
         <div class="circle circle5"></div>
         <div class="circle circle6"></div>
     </div>
-      
+
 
     <div class="container-fluid d-flex flex-column justify-content-center align-items-center min-vh-100 text-center">
         <div>
@@ -33,10 +30,10 @@
             <div class="margin"></div>
             <p>Hello my baby I wanted to make something special for you, but I don't know how to make pretty crafts like you, so I made this, although it's not the best thing in the world, I hope you like it and it can make you happy</p>
         </div>
-        <div class="hola mt-4">
+        <div class="wrapper mt-4">
             <div class="circle-1"></div>
             <div class="circle-2"></div>
-            <div class="tarjeta">
+            <div class="card">
                 <section class="top">
                     <span class="u-l">Reasons why I love you:</span>
                 </section>
@@ -67,39 +64,32 @@
             <p>My favorite songs that I have dedicated to you:</p>
         </div>
 
-        <div class="wrapper">
-            <!-- Nuevo Código -->
-            <div class="wrapper">
-                <div class="container">
-                    <input type="radio" name="slide" id="s1">
-                    <label for="s1" class="card" name="Jisoo">
-                        <div class="content-card">
-                            <h3 class="name">Jisoo</h3>
-                            <h4 class="song">Flower</h4>
-                            <img src="assets/img/flower.jpg" alt="" class="portada">
-                            <audio src="assets/audio/jisoo.mp3" class="audio"></audio>
-                        </div>
-                    </label>
-                    <input type="radio" name="slide" id="s2">
-                    <label for="s2" class="card" name="Jennie">
-                        <div class="content-card">
-                            <h3 class="name">Jennie</h3>
-                            <h4 class="song">You & Me</h4>
-                            <img src="assets/img/youandme.jpg" alt="" class="portada">
-                            <audio src="assets/audio/jennie.mp3" class="audio"></audio>
-                        </div>
-                    </label>
-                    <input type="radio" name="slide" id="s3">
-                    <label for="s3" class="card" name="Jisoo">
-                        <div class="content-card">
-                            <h3 class="name">Jisoo</h3>
-                            <h4 class="song">Flower</h4>
-                            <img src="assets/img/flower.jpg" alt="" class="portada">
-                            <audio src="assets/audio/jisoo.mp3" class="audio"></audio>
-                        </div>
-                    </label>
+        <div class="music-player mt-4">
+            <h2>Our Music Playlist</h2>
+            <div class="playlist">
+                <div class="song" data-src="music/song1.mp3">
+                    <img src="images/song1.jpg" class="song-image" alt="Song 1">
+                    <span class="song-title">Mac DeMarco - My Kind Of Woman</span>
+                    <button class="play-btn">
+                        <img src="images/play-icon.webp" alt="Play">
+                    </button>
+                </div>
+                <div class="song" data-src="music/song2.mp3">
+                    <img src="images/song2.jpg" class="song-image" alt="Song 2">
+                    <span class="song-title">Los Retros - Amtrak</span>
+                    <button class="play-btn">
+                        <img src="images/play-icon.webp" alt="Play">
+                    </button>
+                </div>
+                <div class="song" data-src="music/song3.mp3">
+                    <img src="images/song3.jpg" class="song-image" alt="Song 3">
+                    <span class="song-title">Stephen Sanchez - Until I Found You</span>
+                    <button class="play-btn">
+                        <img src="images/play-icon.webp" alt="Play">
+                    </button>
                 </div>
             </div>
+            <audio id="audio-player" controls></audio>
         </div>
 
         <div class="page mt-1">
@@ -160,7 +150,7 @@
             </div>
             <!-- Agrega más tarjetas de fotos según sea necesario -->
         </div>
-          
+
         <div class="page mt-1">
             <div class="margin"></div>
             <p>This is all for now baby, I hope you liked it.
@@ -170,7 +160,7 @@
         </div>
 
     </div>
-    
+
     <!-- Bootstrap JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
