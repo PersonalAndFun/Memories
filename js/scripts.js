@@ -1,22 +1,23 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const audioPlayer = document.getElementById('audio-player');
-    const playButtons = document.querySelectorAll('.play-btn');
-    const songs = document.querySelectorAll('.song');
+document.addEventListener("DOMContentLoaded", function() {
+    const musicCards = document.querySelectorAll(".music-card");
+    const audioPlayer = document.getElementById("audio-player");
+    let currentCard = null;
 
-    playButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const songElement = button.parentElement;
-            const songSrc = songElement.getAttribute('data-src');
-
-            // Remove active class from all songs
-            songs.forEach(song => song.classList.remove('active'));
-
-            // Add active class to the current song
-            songElement.classList.add('active');
-
-            // Set the audio source and play
-            audioPlayer.src = songSrc;
-            audioPlayer.play();
+    musicCards.forEach(card => {
+        card.addEventListener("click", function() {
+            if (currentCard && currentCard !== card) {
+                currentCard.classList.remove("expanded");
+            }
+            if (currentCard !== card) {
+                card.classList.add("expanded");
+                audioPlayer.src = card.getAttribute("data-audio");
+                audioPlayer.play();
+                currentCard = card;
+            } else {
+                card.classList.remove("expanded");
+                audioPlayer.pause();
+                currentCard = null;
+            }
         });
     });
 });

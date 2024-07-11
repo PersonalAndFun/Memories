@@ -8,6 +8,51 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Archivo de estilos CSS personalizados -->
     <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Estilos adicionales para el pop-up -->
+    <style>
+        /* Estilos para el pop-up */
+        .modal-content {
+            background: #fff;
+            background: linear-gradient(to bottom right, #e3f2fd, #bbdefb);
+            border: none;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+        }
+        .modal-body {
+            font-family: 'Times New Roman', serif;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+        }
+        .modal-header {
+            border-bottom: none;
+        }
+        .modal-footer {
+            border-top: none;
+            justify-content: center;
+            padding-top: 20px;
+        }
+        .modal-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+        .modal-content:before {
+            content: "";
+            background: url('images/background.png');
+            background-size: cover;
+            opacity: 0.15;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            border-radius: 20px;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -64,33 +109,21 @@
             <p>My favorite songs that I have dedicated to you:</p>
         </div>
 
-        <div class="music-player mt-4">
-            <h2>Our Music Playlist</h2>
-            <div class="playlist">
-                <div class="song" data-src="music/song1.mp3">
-                    <img src="images/song1.jpg" class="song-image" alt="Song 1">
-                    <span class="song-title">Mac DeMarco - My Kind Of Woman</span>
-                    <button class="play-btn">
-                        <img src="images/play-icon.webp" alt="Play">
-                    </button>
-                </div>
-                <div class="song" data-src="music/song2.mp3">
-                    <img src="images/song2.jpg" class="song-image" alt="Song 2">
-                    <span class="song-title">Los Retros - Amtrak</span>
-                    <button class="play-btn">
-                        <img src="images/play-icon.webp" alt="Play">
-                    </button>
-                </div>
-                <div class="song" data-src="music/song3.mp3">
-                    <img src="images/song3.jpg" class="song-image" alt="Song 3">
-                    <span class="song-title">Stephen Sanchez - Until I Found You</span>
-                    <button class="play-btn">
-                        <img src="images/play-icon.webp" alt="Play">
-                    </button>
-                </div>
+        <div class="music-section">
+            <div class="music-card" data-audio="music/song1.mp3" style="background-image: url('images/song1.jpg');">
+                <h3 class="song-title">My Kind Of Woman</h3>
+                <h4 class="artist-name">Mac DeMarco</h4>
             </div>
-            <audio id="audio-player" controls></audio>
+            <div class="music-card" data-audio="music/song2.mp3" style="background-image: url('images/song2.jpg');">
+                <h3 class="song-title">Amtrak</h3>
+                <h4 class="artist-name">Los Retros</h4>
+            </div>
+            <div class="music-card" data-audio="music/song3.mp3" style="background-image: url('images/song3.jpg');">
+                <h3 class="song-title">Until I Found You</h3>
+                <h4 class="artist-name">Stephen Sanchez</h4>
+            </div>
         </div>
+        <audio id="audio-player"></audio>
 
         <div class="page mt-1">
             <div class="margin"></div>
@@ -122,14 +155,14 @@
               <img src="images/photo3.jpg" alt="Photo 3">
               <div class="info">
                 <h3>Seventh anniversary</h3>
-                <p>We are so close to our first year together</p>
+                <p>We are so close to one</p>
               </div>
               <div class="overlay">
                 <span>I Love You!</span>
               </div>
             </div>
             <div class="photo-card">
-                <img src="images/photo4.png" alt="Photo 3">
+                <img src="images/photo4.png" alt="Photo 4">
                 <div class="info">
                   <h3>When we just met</h3>
                   <p>I love playing with you</p>
@@ -139,10 +172,60 @@
                 </div>
             </div>
             <div class="photo-card">
-                <img src="images/photo5.png" alt="Photo 3">
+                <img src="images/photo5.png" alt="Photo 5">
                 <div class="info">
                   <h3>Our first draw</h3>
                   <p>You are very talented baby</p>
+                </div>
+                <div class="overlay">
+                  <span>I Love You!</span>
+                </div>
+            </div>
+            <div class="photo-card">
+                <img src="images/photo6.jpg" alt="Photo 6">
+                <div class="info">
+                  <h3>A paper rose</h3>
+                  <p>You are the best at doing these</p>
+                </div>
+                <div class="overlay">
+                  <span>I Love You!</span>
+                </div>
+            </div>
+            <div class="photo-card">
+                <img src="images/photo7.jpg" alt="Photo 7">
+                <div class="info">
+                  <h3>A letter</h3>
+                  <p>I love you so much</p>
+                </div>
+                <div class="overlay">
+                  <span>I Love You!</span>
+                </div>
+            </div>
+            <div class="photo-card">
+                <img src="images/photo8.jpg" alt="Photo 8">
+                <div class="info">
+                  <h3>Another letter</h3>
+                  <p>I love you even more</p>
+                </div>
+                <div class="overlay">
+                  <span>I Love You!</span>
+                </div>
+            </div>
+            <div class="photo-card">
+                <img src="images/photo9.jpg" alt="Photo 9">
+                <div class="info">
+                  <h3>A birthday cake</h3>
+                  <p>^.^</p>
+                </div>
+                <div class="overlay">
+                  <span>I Love You!</span>
+                </div>
+            </div>
+            <div class="photo-card">
+                <img src="images/photo10.jpg" alt="Photo 10">
+                <div class="info">
+                  <h3>You and Me</h3>
+                  <p><3</p>
                 </div>
                 <div class="overlay">
                   <span>I Love You!</span>
@@ -159,6 +242,29 @@
             </p>
         </div>
 
+        <div class="modal fade" id="congratulationsModal" tabindex="-1" role="dialog" aria-labelledby="congratulationsModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="congratulationsModalLabel">¡Happy 11th Anniversary!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Baby,</p>
+                        <p>I hope this day is full of joy and love. I want to tell you how much you mean to me and how happy you make me. Congratulations on everything you have achieved and happy 11th anniversary!</p>
+                        <p>With love,</p>
+                        <p>Your boyfriend :)</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
     </div>
 
     <!-- Bootstrap JS, Popper.js, and jQuery -->
@@ -167,5 +273,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Archivo de scripts JS personalizados -->
     <script src="js/scripts.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#congratulationsModal').modal('show');
+        });
+    </script>
+    
 </body>
 </html>

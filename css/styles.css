@@ -1,9 +1,3 @@
-/* body {
-    background: linear-gradient(135deg, #fdd4d6, #ffb6b9, #ffb6b9, #fdd4d6);
-    color: #ffffff;
-    font-family: 'Arial', sans-serif; 
-} */
-
 body {
     margin: 0;
     padding: 0;
@@ -424,3 +418,63 @@ p {
   .photo-card .overlay span {
     font-size: 1.5rem;
   }
+
+
+.music-section {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 90px;
+}
+
+.music-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    width: 150px; /* Tarjetas un poco más largas */
+    height: 200px; /* Tarjetas un poco más largas */
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.music-card .artist-name {
+    display: none;
+}
+
+.music-card.expanded {
+    width: 300px; /* Tamaño expandido */
+    height: 200px; /* Tamaño expandido */
+    background-size: contain;
+}
+
+.music-card.expanded .song-title {
+    margin-top: 1rem;
+}
+
+.music-card.expanded .artist-name {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.song-title {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+audio {
+    display: none;
+}
+
+h3, h4 {
+    color: #ffffff;
+}
